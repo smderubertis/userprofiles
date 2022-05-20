@@ -1,0 +1,14 @@
+CREATE SCHEMA 'secure_users';
+
+CREATE TABLE `secure_users`.`user` (
+  `email` VARCHAR(45) PRIMARY KEY NOT NULL,
+  `firstname` VARCHAR(45) NOT NULL,
+  `lastname` VARCHAR(45) NOT NULL,
+  `isadmin` BOOLEAN NOT NULL DEFAULT FALSE,
+  `password` VARCHAR(45) NOT NULL);
+
+insert into user(email, firstname, lastname, isadmin, password)
+values ("smderubertis@gmail.com", "Stephen", "DeRubertis", TRUE, "admin");
+
+insert into user(email, firstname, lastname, isadmin, password)
+values ("jdoe@gmail.com", "John", "Doe", FALSE, "john");
